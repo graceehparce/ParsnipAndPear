@@ -4,6 +4,9 @@ import { useState, useEffect } from "react"
 
 export const NewRecipeForm = () => {
 
+    const [formValues, setFormValues] = useState([{ name: "", quantity: "" }])
+
+
     const [phases, setPhases] = useState([])
     const [ingredients, setIngredients] = useState([])
 
@@ -182,6 +185,16 @@ export const NewRecipeForm = () => {
             })
     }
 
+    let handleChange = (currentIndex, changeEvent) => {
+        let newFormValues = [...formValues];
+        newFormValues[currentIndex][changeEvent.target.name] = changeEvent.target.value;
+        setFormValues(newFormValues);
+    }
+
+    let addFormFields = () => {
+        setFormValues([...formValues, { name: "", quantity: "" }])
+    }
+
 
     return <form className="newRecipeForm">
         <h2 className="form-group">New Recipe Form</h2>
@@ -266,6 +279,33 @@ export const NewRecipeForm = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
+
+
+                {formValues.map((element, index) => (
+                    <div className="form-inline" key={index}>
+                        <label>Name</label>
+                        <input type="text" name="name" value={element.name || ""}
+                            onChange={e => handleChange(index, e)} />
+                        <label>Quantity</label>
+                        <input type="text" name="quantity" value={element.quantity || ""}
+                            onChange={e => handleChange(index, e)} />
+                    </div>
+                ))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <label htmlFor="ingredients">Add Ingredient:</label>
                 <input
                     required autoFocus
@@ -298,7 +338,7 @@ export const NewRecipeForm = () => {
                     } />
             </div>
             <button
-                onClick={(clickEvent) => addNewIngredientField(clickEvent)}
+                onClick={addFormFields}
                 className="add_ingredient_button">
                 +
             </button>
