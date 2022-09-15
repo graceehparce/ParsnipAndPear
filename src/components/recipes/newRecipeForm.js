@@ -5,21 +5,7 @@ import { useState, useEffect } from "react"
 export const NewRecipeForm = () => {
 
     const [formValues, setFormValues] = useState([{ name: "", quantity: "" }])
-
-
     const [phases, setPhases] = useState([])
-    const [ingredients, setIngredients] = useState([])
-
-    const [ingredient, setNewIngredient] = useState({
-        name: ""
-    })
-
-    const [recipeIngredient, setNewRI] = useState({
-        recipeId: "",
-        ingredientId: "",
-        quantity: ""
-    })
-
     const [recipe, setNewRecipe] = useState({
         phaseId: "",
         cookTime: "",
@@ -40,98 +26,45 @@ export const NewRecipeForm = () => {
     )
 
 
-    useEffect(
-        () => {
-            fetch('http://localhost:8088/ingredients')
-                .then(response => response.json())
-                .then((ingredientsArray) => {
-                    setIngredients(ingredientsArray)
-                })
-        },
-        []
-    )
 
-    const addNewIngredientField = () => {
-        return <fieldset>
-            <div className="form-group">
-                <label htmlFor="ingredients">Add Ingredient:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="What's in it?"
-                    value={ingredient.name}
-                    onChange={
-                        (evt) => {
-                            const copy = structuredClone(ingredient)
-                            copy.name = evt.target.value
-                            setNewIngredient(copy)
-                        }
-                    } />
-            </div>
-            <div className="form-group">
-                <label htmlFor="ingredient_quantity">Quantity:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="How much?"
-                    value={recipeIngredient.quantity}
-                    onChange={
-                        (evt) => {
-                            const copy = structuredClone(recipeIngredient)
-                            copy.quantity = evt.target.value
-                            setNewRI(copy)
-                        }
-                    } />
-            </div>
-            <button
-                onClick={(clickEvent) => addNewIngredientField(clickEvent)}
-                className="add_ingredient_button">
-                +
-            </button>
-        </fieldset>
+
+    const createRecipe = (recipeObject) => {
+        return fetch("http://localhost:8088/recipes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(recipeObject)
+        })
+            .then(response => response.json())
     }
 
+    const createIngredient = (formObject) => {
+        return fetch("http://localhost:8088/ingredients", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name: formObject.name })
+        })
+            .then(response => response.json())
+    }
 
-
-
-    // const FindOrCreateIngredient = (evtName) => {
-
-
-
-
-    //     const foundIngredient = ingredients.find((ingredient) => { return ingredient.name === evtName })
-
-    //     {
-    //         if (foundIngredient) {
-    //             return RIToSendToAPI.ingredientId === foundIngredient.id
-    //         }
-    //         else {
-    //             fetch("http://localhost:8088/ingredients", {
-    //                 method: "POST",
-    //                 headers: {
-    //                     "Content-Type": "application/json"
-    //                 },
-    //                 body: JSON.stringify(IngredientToSendToAPI)
-    //             })
-    //                 .then(response => response.json())
-    //         }
-    //     }
-    // }
-
-
+    const createRecipeIngredient = (recipeId, ingredientId, quantity) => {
+        return fetch("http://localhost:8088/recipeIngredients", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                recipeId, ingredientId, quantity
+            })
+        })
+            .then(response => response.json())
+    }
 
     const saveButton = (event) => {
         event.preventDefault()
-        /*
-        1. create an object for the recipe
-        2.create an object for the ingredient
-        3.post recipe to json server and capture response
-        4.post ingredient and capture response
-        5.create recipe ingredient object using the pk from previous fetch calls
-        6.post recipe ingredient object to json server
-        */
 
         const recipeToSendToAPI = {
             phaseId: recipe.phaseId,
@@ -140,48 +73,29 @@ export const NewRecipeForm = () => {
             directions: recipe.directions
         }
 
-
-        fetch("http://localhost:8088/recipes", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(recipeToSendToAPI)
-        })
-            .then(response => response.json())
+        createRecipe(recipeToSendToAPI)
             .then(newRecipe => {
+                const ingredientPromises = formValues.map(
+                    formObject => {
+                        return createIngredient(formObject)
+                    }
+                )
 
-                const IngredientToSendToAPI = {
-                    name: ingredient.name
-                }
+                // do fetch call to create ingredients
 
-                fetch("http://localhost:8088/ingredients", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(IngredientToSendToAPI)
-                })
-                    .then(response => response.json())
-                    .then(newIngredient => {
-
-                        const RIToSendToAPI = {
-                            quantity: recipeIngredient.quantity
-                        }
-                        RIToSendToAPI.ingredientId = newIngredient.id
-                        RIToSendToAPI.recipeId = newRecipe.id
-
-
-
-                        fetch("http://localhost:8088/recipeIngredients", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify(RIToSendToAPI)
+                Promise.all(ingredientPromises)
+                    .then(newIngredientArray => {
+                        newIngredientArray.forEach((ingredient) => {
+                            const foundQuantity = formValues.find((formIngredientObject) => {
+                                return ingredient.name === formIngredientObject.name
+                            }).quantity
+                            createRecipeIngredient(newRecipe.id, ingredient.id, foundQuantity)
                         })
-                            .then(response => response.json())
                     })
+
+
+
+
             })
     }
 
@@ -280,7 +194,7 @@ export const NewRecipeForm = () => {
         <fieldset>
             <div className="form-group">
 
-
+                <h3>Add Ingredients Here:</h3>
                 {formValues.map((element, index) => (
                     <div className="form-inline" key={index}>
                         <label>Name</label>
@@ -291,56 +205,11 @@ export const NewRecipeForm = () => {
                             onChange={e => handleChange(index, e)} />
                     </div>
                 ))}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <label htmlFor="ingredients">Add Ingredient:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="What's in it?"
-                    value={ingredient.name}
-                    onChange={
-                        (evt) => {
-                            const copy = structuredClone(ingredient)
-                            copy.name = evt.target.value
-                            setNewIngredient(copy)
-                        }
-                    } />
-            </div>
-            <div className="form-group">
-                <label htmlFor="ingredient_quantity">Quantity:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="How much?"
-                    value={recipeIngredient.quantity}
-                    onChange={
-                        (evt) => {
-                            const copy = structuredClone(recipeIngredient)
-                            copy.quantity = evt.target.value
-                            setNewRI(copy)
-                        }
-                    } />
             </div>
             <button
                 onClick={addFormFields}
                 className="add_ingredient_button">
-                +
+                New Ingredient
             </button>
         </fieldset>
         <button
