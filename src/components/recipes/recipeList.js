@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
+import "./recipeList.css"
+
 
 export const RecipeList = () => {
     const navigate = useNavigate()
@@ -11,17 +13,11 @@ export const RecipeList = () => {
     const { phaseId } = useParams()
 
     const [recipes, setRecipes] = useState([])
-    const [phase, setPhase] = useState({})
+    const [filteredRecipes, setFilteredRecipes] = useState([])
+    const [veganRecipes, setVeganRecipes] = useState([])
+    const [GFRecipes, setGFRecipes] = useState([])
 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/recipes/?phaseId=${phaseId}`)
-                .then(response => response.json())
-                .then((recipeArray) => {
-                    setRecipes(recipeArray)
-                })
-        },
-        [phaseId])
+    const [phase, setPhase] = useState({})
 
     useEffect(
         () => {
@@ -29,6 +25,18 @@ export const RecipeList = () => {
                 .then(response => response.json())
                 .then((phaseObject) => {
                     setPhase(phaseObject)
+                })
+        },
+        [phaseId])
+
+
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/recipes/?phaseId=${phaseId}`)
+                .then(response => response.json())
+                .then((recipeArray) => {
+                    setRecipes(recipeArray)
+                    setFilteredRecipes(recipeArray)
                 })
         },
         [phaseId])
@@ -54,20 +62,34 @@ export const RecipeList = () => {
 
 
 
-    return <section className="recipe_list">
-        <header className="phaseName">{phase?.name} Phase Recipe List</header>
-        <div>
-            {
-                recipes.map((recipe) => {
-                    return <li><Link to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
-                        <button
-                            value={recipe.id}
-                            onClick={(clickEvent) => createNewUserRecipe(clickEvent)}
-                            className="userRecipe_button">Add to My Recipes</button>
-                    </li>
-                }
-                )
-            }
+    return <section className="flexBox_recipeList">
+        <div className="listBox1">
+            <div className="listBox2">
+                <div className="listBox3">
+                    <div className="titleBox">
+                        <h2 className="phaseName">{phase?.name} Phase Recipe List</h2>
+                        <div>
+                            <button className="list-button">Vegan</button>
+                            <button className="list-button">Gluten-Free</button>
+                        </div>
+                    </div>
+                    <section className="phaseRecipe_list">
+                        <div>
+                            {
+                                filteredRecipes.map((recipe) => {
+                                    return <li className="phaseRecipe_name"><Link className="phaseRecipe_name" to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
+                                        <button
+                                            value={recipe.id}
+                                            onClick={(clickEvent) => createNewUserRecipe(clickEvent)}
+                                            className="add-button">Add to My Recipes</button>
+                                    </li>
+                                }
+                                )
+                            }
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
     </section>
 }

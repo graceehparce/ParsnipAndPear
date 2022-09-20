@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+.flexBox-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newRecipeForm {
+    background-color: rgb(137, 94, 14);
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.inner_form {
+    background-image: url("../images/background.jpg");
+    background-size: 900px;
+    width: 800px;
+    height: auto;
+    border: 7px solid;
+    color: rgb(233, 190, 165);
+    margin: 50px;
+    box-shadow: 0 0 10px 10px rgb(164, 157, 70);
+    padding: 50px;
+}
+
+.white_form {
+    background-size: 700px;
+    background-color: rgb(233, 190, 165);
+    width: 700px;
+    height: auto;
+    border: 7px solid white;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.form-group {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.title {
+    text-align: center;
+    margin: 30px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: xx-large;
+    font-weight: 2000;
+    background-color: white;
+    width: 160px;
+    height: 40px;
+    border-radius: 40%;
+    padding: 3px
+}
+
+.outer_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 70px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: larger;
+    font-weight: bolder;
+    background-image: url("../images/background.jpg");
+    background-size: 100px;
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin-left: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.add_ingredient_button {
+    width: 100px;
+    height: 30px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: rgb(164, 157, 70);
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.save_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 70px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: larger;
+    font-weight: bolder;
+    background-image: url("../images/background.jpg");
+    background-size: 100px;
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin-left: 225px;
+    margin-bottom: 20px;
+}
+
+.inner_button {
+    background-color: white;
+    width: 160px;
+    height: 35px;
+    border-radius: 40%;
+    padding: 4px
+}
+
+.form-control {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.form-option {
+    font-family: 'Amatic SC', cursive;
+}

@@ -1,14 +1,44 @@
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
 }
 
-.navbar__logout {
-    margin-left: auto;
+.navBar {
+    display: flex;
+    justify-content: left;
+    flex: row;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    font-size: x-large;
+    background-color: white;
+}
+
+.logo_nav {
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(137, 94, 14);
+    border-radius: 50%;
+
+}
+
+.wholeBar {
+    background-color: rgb(233, 190, 165);
+}
+
+.navbar__link {
+    font-size: large;
+    text-decoration: none;
+    color: rgb(98, 66, 8);
+    align-items: center;
+}
+
+.navbar__item.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 50px solid white;
+
 }

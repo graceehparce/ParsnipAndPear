@@ -1,0 +1,98 @@
+.flexBox_recipeList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.listBox1 {
+    background-color: rgb(137, 94, 14);
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.listBox2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/background.jpg");
+    background-size: 800px;
+    width: 675px;
+    height: auto;
+    margin: 50px;
+    border: 10px solid rgb(233, 190, 165);
+    box-shadow: 0 0 5px 5px rgb(164, 157, 70);
+}
+
+
+.listBox3 {
+    background-color: white;
+    border: 5px solid rgb(233, 190, 165);
+    width: 575px;
+    height: auto;
+    margin: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 2000;
+}
+
+.phaseRecipe_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 2000;
+    text-decoration: none;
+}
+
+.list-button {
+    width: 100px;
+    height: 30px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: rgb(164, 157, 70);
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin: 5px;
+
+}
+
+.add-button {
+    width: 100px;
+    height: 30px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: rgb(233, 190, 165);
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin: 15px;
+
+}

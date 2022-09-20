@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import "./recipeProfile.css"
+
 
 export const RecipeProfile = () => {
     const { recipeId } = useParams()
@@ -23,7 +25,7 @@ export const RecipeProfile = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/recipeIngredient?_expand=ingredient&recipeId=${recipeId}`)
+            fetch(`http://localhost:8088/recipeIngredients?_expand=ingredient&recipeId=${recipeId}`)
                 .then(response => response.json())
                 .then((ingredientArray) => {
                     setIngredients(ingredientArray)
@@ -51,23 +53,40 @@ export const RecipeProfile = () => {
     }
 
 
-    return <section classname="recipeProfile">
-        <h2 classname="recipeName">{recipe?.name}</h2>
-        <div>Cooktime: {recipe?.cookTime}</div>
-        <div>Ingredients:
-            <ul>
-                {
-                    recIngredients.map((recIngredient) => {
-                        return <li>{recIngredient.quantity} {recIngredient.ingredient.name}<button
-                            value={recIngredient.ingredientId}
-                            id={recIngredient.quantity}
-                            onClick={(clickEvent) => createNewUserIngredient(clickEvent)}
-                            className="userIngredient_button">Add</button></li>
-                    }
-                    )
-                }
-            </ul>
-        </div>
-        <div>Directions: {recipe?.directions}</div>
-    </section>
+    return <section className="profileFlexBox">
+        <div className="RPBox1">
+            <div className="RPBox2">
+                <div className="RPBox3">
+
+                    <section className="recipeProfile">
+                        <div className="recipeName">{recipe?.name}</div>
+                        <div className="upperBox">
+                            <img src={recipe.image} width="300px" height="450px" alt=""></img>
+                            <div className="cooktimeBox">
+                                <div className="cooktime">Cooktime: {recipe?.cookTime} minutes</div>
+                                <div>Ingredients:
+                                    <ul className="flexIng">
+                                        {
+                                            recIngredients.map((recIngredient) => {
+                                                return <li className="flexItem">{recIngredient.quantity} {recIngredient.ingredient.name}
+                                                    <button
+                                                        value={recIngredient.ingredientId}
+                                                        id={recIngredient.quantity}
+                                                        onClick={(clickEvent) => createNewUserIngredient(clickEvent)}
+                                                        className="addButton">Add
+                                                    </button>
+                                                </li>
+                                            }
+                                            )
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="directions">Directions: {recipe?.directions}</div>
+                    </section>
+                </div>
+            </div>
+        </div >
+    </section >
 }

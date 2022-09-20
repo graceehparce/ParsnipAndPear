@@ -6,7 +6,7 @@ export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
         fullName: "",
-        isStaff: false
+        staff: false
     })
     let navigate = useNavigate()
 
@@ -23,7 +23,7 @@ export const Register = (props) => {
                 if (createdUser.hasOwnProperty("id")) {
                     localStorage.setItem("pandp_user", JSON.stringify({
                         id: createdUser.id,
-                        staff: createdUser.isStaff
+                        staff: createdUser.staff
                     }))
 
                     navigate("/")
@@ -70,10 +70,10 @@ export const Register = (props) => {
                 <fieldset>
                     <input onChange={(evt) => {
                         const copy = { ...user }
-                        copy.isStaff = evt.target.checked
+                        copy.staff = evt.target.checked
                         setUser(copy)
                     }}
-                        type="checkbox" id="isStaff" />
+                        type="checkbox" id="staff" />
                     <label htmlFor="email"> I am an employee </label>
                 </fieldset>
                 <fieldset>

@@ -1,0 +1,91 @@
+.editBox1 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.editBox2 {
+    background-color: rgb(137, 94, 14);
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.editBox3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/background.jpg");
+    background-size: 800px;
+    width: 675px;
+    height: auto;
+    margin: 50px;
+    border: 10px solid rgb(233, 190, 165);
+    box-shadow: 0 0 5px 5px rgb(164, 157, 70);
+}
+
+.editBox4 {
+    background-color: rgb(233, 190, 165);
+    border: 5px solid white;
+    width: 575px;
+    height: auto;
+    margin: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.edit_heading {
+    text-align: center;
+    margin: 10px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: xx-large;
+    font-weight: 2000;
+    background-color: white;
+    width: 160px;
+    height: 40px;
+    border-radius: 40%;
+    padding: 3px
+}
+
+.edit_name {
+    margin: 0;
+    text-decoration: none;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 2000;
+}
+
+.label {
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 2000;
+}
+
+.update_button {
+    width: 100px;
+    height: 30px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: rgb(164, 157, 70);
+    border: 2px solid rgb(137, 94, 14);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

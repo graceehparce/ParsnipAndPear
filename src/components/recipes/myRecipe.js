@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import "./myRecipes.css"
+
 
 export const MyRecipes = () => {
     const localUser = localStorage.getItem("pandp_user")
@@ -18,15 +20,50 @@ export const MyRecipes = () => {
         },
         [])
 
+
+    const deleteUR = (evt) => {
+
+        return fetch(`http://localhost:8088/userRecipes/${evt.target.value}`, {
+            method: "DELETE"
+        })
+            .then(() => {
+                fetch(`http://localhost:8088/userRecipes/?userId=${userObject.id}&_expand=recipe`)
+                    .then(response => response.json())
+                    .then((userRecipeArray) => {
+                        setUserRecipes(userRecipeArray)
+                    })
+
+            })
+    }
+
     return <section className="recipe_list">
-        <header className="title"> My Recipes </header>
-        <div>
-            {
-                userRecipes.map((userRecipe) => {
-                    return <li><Link to={`/recipe/${userRecipe.id}`}>{userRecipe.recipe.name}</Link></li>
-                }
-                )
-            }
+        <div className="inner_list">
+            <div className="banner_pic_box">
+                <div className="list_box">
+                    <div className="outer">
+                        <h2 className="inner_title">
+                            <div className="myRecipes_title">
+                                My Recipes
+                            </div>
+                        </h2>
+                    </div>
+                    <div>
+                        {
+                            userRecipes.map((userRecipe) => {
+                                return <li className="recipe">
+                                    <Link className="recipe_name" to={`/recipe/${userRecipe.recipe.id}`}>{userRecipe.recipe.name}</Link>
+                                    <button
+                                        className="delete_button"
+                                        value={userRecipe.id}
+                                        onClick={deleteUR}>Delete
+                                    </button>
+                                </li>
+                            }
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 }

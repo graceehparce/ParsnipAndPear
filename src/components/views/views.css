@@ -1,0 +1,9 @@
+.banner {
+    text-align: center;
+    margin: 0px;
+}
+
+.banner_img {
+    margin-top: 0px;
+    border: 5px solid rgb(137, 94, 14);
+}

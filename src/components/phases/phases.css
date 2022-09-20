@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.phase_container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.phases {
+    background-color: rgb(137, 94, 14);
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_container {
+    background-color: rgb(233, 190, 165);
+    width: 700px;
+    height: 700px;
+}
+
+.inner_phases {
+    background-image: url("../images/phases.jpg");
+    background-size: 600px;
+    width: 600px;
+    height: 600px;
+    border: 7px solid;
+    color: rgb(233, 190, 165);
+    margin: 50px;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 800;
+    display: grid;
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(2, 300px);
+    box-shadow: 0 0 10px 10px rgb(164, 157, 70);
+}
+
+.phase {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a.phaseName__link {
+    text-decoration: none;
+    color: #895e0e;
+}
+
+
+.recipeButton {
+    text-decoration: none;
+    color: #895e0e;
+}
+
+
+h2 {
+    margin: 0px;
+    color: #895e0e;
+}
