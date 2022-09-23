@@ -18,9 +18,6 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <div className="banner">
-                        <img src={banner} alt="banner_img" className="banner_img" style={{ width: '550px', height: '120px' }} />
-                    </div>
                     <Outlet />
                 </>
             }>

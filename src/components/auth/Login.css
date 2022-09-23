@@ -23,6 +23,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
 
+
 }
 
 fieldset {
@@ -37,6 +38,8 @@ fieldset {
     margin: 0 auto;
     text-align: left;
     color: white;
+    border-radius: 2%;
+    margin: 40px;
 }
 
 .form--login>fieldset>input[type="email"] {
@@ -52,7 +55,7 @@ fieldset {
     display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
+    padding: 2px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -76,7 +79,7 @@ fieldset {
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     margin: 50px;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 0 10px 10px rgb(164, 157, 70);
 }
 
@@ -115,6 +118,11 @@ button {
 .pleaseRegister {
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bolder;
+    margin: 10px;
+}
+
+.inputSection {
+    padding: 5px;
 }

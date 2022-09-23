@@ -90,7 +90,7 @@ export const RecipeList = () => {
                 <div className="listBox3">
                     <div className="titleBox">
                         <h2 className="phaseName">{phase?.name} Phase Recipe List</h2>
-                        <div>
+                        <div className="buttons">
                             <button
                                 onClick={() => setVeganRecipes(!veganRecipes)}
                                 className="list-button">
@@ -112,11 +112,16 @@ export const RecipeList = () => {
                         <div>
                             {
                                 filteredRecipes.map((recipe) => {
-                                    return <li className="phaseRecipe_name"><img className="picInList" src={recipe.image} alt=""></img><Link className="phaseRecipe_name" to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
-                                        <button
-                                            value={recipe.id}
-                                            onClick={(clickEvent) => createNewUserRecipe(clickEvent)}
-                                            className="add-button">Add to My Recipes</button>
+                                    return <li className="phaseRecipe">
+
+                                        <img className="picInList" src={recipe.image} alt=""></img>
+                                        <div className="nameAndButton">
+                                            <Link className="phaseRecipe_name" to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
+                                            <button
+                                                value={recipe.id}
+                                                onClick={(clickEvent) => createNewUserRecipe(clickEvent)}
+                                                className="add-button">Add to My Recipes</button>
+                                        </div>
                                     </li>
                                 }
                                 )

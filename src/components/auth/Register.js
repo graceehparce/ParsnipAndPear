@@ -54,24 +54,25 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="whole" style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <img src={logo} alt="logo_img" className="logo_nav" style={{ width: '150px', }} />
-
-                <h1 className="pleaesRegister">Please Register Parsnip and Pear</h1>
-                <fieldset>
+                <div className="logo_box">
+                    <img src={logo} alt="logo_img" className="logo_nav" style={{ width: '100px', }} />
+                </div>
+                <h1 className="pleaseRegister">Please Register</h1>
+                <fieldset className="inputSection">
                     <label htmlFor="fullName"> Full Name </label>
                     <input onChange={updateUser}
                         type="text" id="fullName" className="form-control"
                         placeholder="Enter your name" required autoFocus />
                 </fieldset>
-                <fieldset>
+                <fieldset className="inputSection">
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateUser}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
-                <fieldset>
+                <fieldset className="inputSection">
                     <input onChange={(evt) => {
                         const copy = { ...user }
                         copy.staff = evt.target.checked
@@ -80,7 +81,7 @@ export const Register = (props) => {
                         type="checkbox" id="staff" />
                     <label htmlFor="email"> I am an employee </label>
                 </fieldset>
-                <fieldset>
+                <fieldset className="inputSection">
                     <button type="submit"> Register </button>
                 </fieldset>
             </form>

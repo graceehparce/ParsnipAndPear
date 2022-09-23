@@ -1,20 +1,19 @@
 .profileFlexBox {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border-radius: 2%;
+
 }
 
 .RPBox1 {
-    background-color: rgb(137, 94, 14);
-    width: 1100px;
-    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    border-radius: 2%;
+
 }
 
 .RPBox2 {
@@ -23,18 +22,19 @@
     justify-content: center;
     align-items: center;
     background-image: url("../images/background.jpg");
-    background-size: 900px;
-    width: 1000px;
+    background-size: 200px;
+    width: 800px;
     height: auto;
-    margin: 50px;
     border: 10px solid rgb(233, 190, 165);
     box-shadow: 0 0 5px 5px rgb(164, 157, 70);
+    border-radius: 2%;
+
 }
 
 .RPBox3 {
-    background-color: rgb(233, 190, 165);
-    border: 5px solid white;
-    width: 900px;
+    background-color: white;
+    border: 5px solid rgb(233, 190, 165);
+    width: 700px;
     height: auto;
     margin: 25px;
     padding: 20px;
@@ -42,6 +42,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-radius: 2%;
+
 }
 
 
@@ -50,13 +52,17 @@
     flex-direction: row;
     margin: 20px;
     height: 500px;
+    border-radius: 2%;
+
 }
 
 .thePicBox {
     object-fit: cover;
     height: 100%;
-    width: 250px;
+    width: 200px;
     border: 5px solid white;
+    border-radius: 2%;
+
 }
 
 .cooktimeBox {
@@ -111,6 +117,8 @@
     touch-action: manipulation;
     vertical-align: baseline;
     width: auto;
+    border-radius: 2%;
+
 }
 
 .addButton:hover,
@@ -166,4 +174,8 @@
     font-size: x-large;
     text-decoration: underline;
     padding-bottom: 5px;
+}
+
+.recipeProfile {
+    width: 700px;
 }

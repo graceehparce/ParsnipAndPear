@@ -45,7 +45,7 @@ export const ShoppingList = () => {
                         <h2 className="heading">Shopping List
                         </h2>
                     </div>
-                    <ul>
+                    <ul className="flexList">
                         {
                             userIngredients.map((userIngredient) => {
                                 return <li className="item">

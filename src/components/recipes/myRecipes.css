@@ -1,19 +1,18 @@
 .recipe_list {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .inner_list {
-    background-color: rgb(137, 94, 14);
-    width: 800px;
+    width: 1000px;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    border-radius: 2%;
+
 }
 
 .banner_pic_box {
@@ -22,25 +21,32 @@
     justify-content: center;
     align-items: center;
     background-image: url("../images/background.jpg");
-    background-size: 800px;
-    width: 675px;
+    background-size: 200px;
+    width: 900px;
     height: auto;
-    margin: 50px;
     border: 10px solid rgb(233, 190, 165);
     box-shadow: 0 0 5px 5px rgb(164, 157, 70);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    border-radius: 2%;
+
 }
 
 .list_box {
-    background-color: rgb(233, 190, 165);
-    border: 5px solid white;
-    width: 575px;
+    background-color: white;
+    border: 5px solid rgb(233, 190, 165);
+    width: 800px;
     height: auto;
-    margin: 25px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 2%;
+
 }
 
 .outer {
@@ -60,19 +66,21 @@
     box-shadow: 0 0 2px 2px rgb(164, 157, 70);
     margin-bottom: 20px;
     margin-top: 20px;
+    border-radius: 2%;
+
 
 }
 
 .myRecipes_title {
     text-align: center;
-    margin: 30px;
+    margin: 10px;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 2000;
     background-color: white;
-    width: 160px;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     border-radius: 40%;
     padding: 3px
 }
@@ -81,8 +89,8 @@
     text-decoration: none;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: xx-large;
-    font-weight: 2000;
+    font-size: xarge;
+    font-weight: 900;
 }
 
 .delete_button {
@@ -95,9 +103,7 @@
     background-color: rgb(164, 157, 70);
     border: 2px solid rgb(137, 94, 14);
     box-shadow: 0 0 2px 2px rgb(164, 157, 70);
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
 }
 
 .recipe::marker {
@@ -105,19 +111,30 @@
 }
 
 .listPicBox {
-    width: 65px;
+    width: 75px;
     height: 100%;
-    border: 2px solid white;
+    border: 2px solid rgb(137, 94, 14);
     margin: 5px;
 }
 
 .recipe {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgb(164, 157, 70);
+    background-color: rgb(249, 227, 215);
+    box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    border-radius: 2%;
+}
+
+.info {
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: small;
+    font-weight: bolder;
 }
 
 .titleBox {
@@ -125,4 +142,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.recipeGrid {
+    display: grid;
+    grid-template-rows: repeat(180px);
+    grid-template-columns: repeat(3, 180px);
+    grid-gap: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

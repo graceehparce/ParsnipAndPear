@@ -49,22 +49,23 @@ export const MyRecipes = () => {
                             </h2>
                         </div>
                     </div>
-
-                    {
-                        userRecipes.map((userRecipe) => {
-                            return <li className="recipe">
-                                <img className="listPicBox" src={userRecipe.recipe.image} alt=""></img>
-                                <Link className="recipe_name" to={`/recipe/${userRecipe.recipe.id}`}>{userRecipe.recipe.name}</Link>
-                                <button
-                                    className="delete_button"
-                                    value={userRecipe.id}
-                                    onClick={deleteUR}>Delete
-                                </button>
-                            </li>
+                    <div className="recipeGrid">
+                        {
+                            userRecipes.map((userRecipe) => {
+                                return <li className="recipe">
+                                    <img className="listPicBox" src={userRecipe.recipe.image} alt=""></img>
+                                    <Link className="recipe_name" to={`/recipe/${userRecipe.recipe.id}`}>{userRecipe.recipe.name}</Link>
+                                    <div className="info">Cooktime: {userRecipe.recipe.cookTime}</div>
+                                    <button
+                                        className="delete_button"
+                                        value={userRecipe.id}
+                                        onClick={deleteUR}>Delete
+                                    </button>
+                                </li>
+                            }
+                            )
                         }
-                        )
-                    }
-
+                    </div>
                 </div>
             </div>
         </div>

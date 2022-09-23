@@ -1,19 +1,23 @@
 .IGbox {
     background-color: rgb(137, 94, 14);
     border: 5px solid rgb(233, 190, 165);
-    width: 600px;
+    width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+    box-shadow: 0 0 5px 5px rgb(164, 157, 70);
+    border-radius: 2%;
+
 }
 
 .infoGraphic {
     border: 5px solid rgb(164, 157, 70);
     box-shadow: 0 0 10px 10px rgb(233, 190, 165);
+    border-radius: 2%;
 }
 
 .box {
@@ -21,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-radius: 2%;
+
 }

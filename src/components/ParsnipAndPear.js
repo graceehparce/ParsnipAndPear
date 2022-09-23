@@ -7,21 +7,24 @@ import { Register } from "./auth/Register"
 import "./ParsnipAndPear.css"
 
 
+
 export const ParsnipAndPear = () => {
-  return <Routes>
-    <Route path="/login" element={<Login />} />
-    <Route path="/register" element={<Register />} />
+  return <div className="html">
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-    <Route path="*" element={
-      <Authorized>
-        <>
-          <NavBar />
-          <ApplicationViews />
-        </>
-      </Authorized>
+      <Route path="*" element={
+        <Authorized>
+          <>
+            <NavBar />
+            <ApplicationViews />
+          </>
+        </Authorized>
 
-    } />
-  </Routes>
+      } />
+    </Routes>
+  </div>
 }
 
 

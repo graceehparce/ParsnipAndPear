@@ -130,10 +130,12 @@ export const NewRecipeForm = () => {
         <form className="newRecipeForm">
             <div className="inner_form">
                 <div className="white_form">
-                    <div className="outer_title">
-                        <h2 className="title">New Recipe Form</h2>
+                    <div className="flexTitle">
+                        <div className="outer_title">
+                            <h2 className="title">New Recipe Form</h2>
+                        </div>
                     </div>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <label htmlFor="name">Name:</label>
                             <input
@@ -151,10 +153,10 @@ export const NewRecipeForm = () => {
                                 } />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <div>
-                                <label class="type_title" htmlFor="type">Which Phase?
+                                <label htmlFor="type">Which Phase?
                                 </label>
                             </div>
                             <select
@@ -176,7 +178,7 @@ export const NewRecipeForm = () => {
                             </select>
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <label htmlFor="cookTime">CookTime:</label>
                             <input
@@ -193,7 +195,8 @@ export const NewRecipeForm = () => {
                                     }
                                 } />
                         </div>
-                    </fieldset>  <fieldset>
+                    </fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <label htmlFor="image">Image:</label>
                             <input
@@ -211,10 +214,10 @@ export const NewRecipeForm = () => {
                                 } />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <div>
-                                <label class="vegan" htmlFor="type">Vegan?
+                                <label htmlFor="type">Vegan?
                                 </label>
                             </div>
                             <select
@@ -232,10 +235,10 @@ export const NewRecipeForm = () => {
                             </select>
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <div>
-                                <label class="gluten-free" htmlFor="type">Gluten-Free?
+                                <label htmlFor="type">Gluten-Free?
                                 </label>
                             </div>
                             <select
@@ -253,7 +256,7 @@ export const NewRecipeForm = () => {
                             </select>
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
                             <label htmlFor="directions">Directions:</label>
                             <input
@@ -271,10 +274,10 @@ export const NewRecipeForm = () => {
                                 } />
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="formSection">
                         <div className="form-group">
 
-                            <h3>Add Ingredients Here:</h3>
+                            <label>Add Ingredients Here:</label>
                             {formValues.map((element, index) => (
                                 <div className="form-inline" key={index}>
                                     <label>Name:     </label>
@@ -301,6 +304,6 @@ export const NewRecipeForm = () => {
                     </button>
                 </div>
             </div>
-        </form>
-    </div>
+        </form >
+    </div >
 }

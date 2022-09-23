@@ -58,8 +58,7 @@ export const RecipeProfile = () => {
         <div className="RPBox1">
             <div className="RPBox2">
                 <div className="RPBox3">
-
-                    <section className="recipeProfile">
+                    <div className="recipeProfile">
                         <div className="recipeName">{recipe?.name}</div>
                         <div className="upperBox">
                             <img className="thePicBox" src={recipe.image} alt=""></img>
@@ -90,7 +89,7 @@ export const RecipeProfile = () => {
                             <div className="directions_title">Directions: </div>
                             <div className="directions_content">{recipe?.directions}</div>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div >

@@ -5,42 +5,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 2%;
+
 }
 
 .newRecipeForm {
-    background-color: rgb(137, 94, 14);
     width: 900px;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 2%;
+
 }
+
 
 .inner_form {
     background-image: url("../images/background.jpg");
-    background-size: 900px;
+    background-size: 200px;
     width: 800px;
     height: auto;
     border: 7px solid;
     color: rgb(233, 190, 165);
-    margin: 50px;
     box-shadow: 0 0 10px 10px rgb(164, 157, 70);
-    padding: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2%;
+
 }
 
 .white_form {
     background-size: 700px;
-    background-color: rgb(233, 190, 165);
-    width: 700px;
+    background-color: white;
+    width: 750px;
     height: auto;
     border: 7px solid white;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: x-large;
-    font-weight: 800;
+    border-radius: 2%;
+
 }
 
 .form-group {
@@ -62,6 +70,13 @@
     padding: 3px
 }
 
+.flexTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .outer_title {
     display: flex;
     flex-direction: row;
@@ -77,9 +92,10 @@
     background-size: 100px;
     border: 2px solid rgb(137, 94, 14);
     box-shadow: 0 0 2px 2px rgb(164, 157, 70);
-    margin-left: 150px;
     margin-bottom: 20px;
     margin-top: 20px;
+    border-radius: 2%;
+
 }
 
 .add_ingredient_button {
@@ -95,6 +111,8 @@
     margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 2%;
+
 }
 
 .save_button {
@@ -114,6 +132,8 @@
     box-shadow: 0 0 2px 2px rgb(164, 157, 70);
     margin-left: 225px;
     margin-bottom: 20px;
+    border-radius: 2%;
+
 }
 
 .inner_button {
@@ -127,9 +147,21 @@
 .form-control {
     font-family: 'Amatic SC', cursive;
     font-weight: 900;
-    font-size: larger;
+    font-size: x-large;
+
 }
 
 .form-option {
     font-family: 'Amatic SC', cursive;
+}
+
+.formSection {
+    padding: 5px;
+    font-size: large;
+    font-weight: 700;
+}
+
+.label {
+    font-size: medium;
+    font-weight: 700;
 }
