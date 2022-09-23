@@ -8,7 +8,7 @@
 
 .RPBox1 {
     background-color: rgb(137, 94, 14);
-    width: 1000px;
+    width: 1100px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -24,7 +24,7 @@
     align-items: center;
     background-image: url("../images/background.jpg");
     background-size: 900px;
-    width: 900px;
+    width: 1000px;
     height: auto;
     margin: 50px;
     border: 10px solid rgb(233, 190, 165);
@@ -34,7 +34,7 @@
 .RPBox3 {
     background-color: rgb(233, 190, 165);
     border: 5px solid white;
-    width: 800px;
+    width: 900px;
     height: auto;
     margin: 25px;
     padding: 20px;
@@ -49,18 +49,32 @@
     display: flex;
     flex-direction: row;
     margin: 20px;
+    height: 500px;
+}
+
+.thePicBox {
+    object-fit: cover;
+    height: 100%;
+    width: 250px;
+    border: 5px solid white;
 }
 
 .cooktimeBox {
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: large;
+    font-size: medium;
     font-weight: bolder;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 250px;
-    height: auto;
+
+}
+
+.cookIngBox {
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    text-decoration: underline;
 }
 
 .flexItem {
@@ -68,6 +82,7 @@
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    width: 200px;
 }
 
 .addButton {
@@ -80,7 +95,44 @@
     background-color: rgb(164, 157, 70);
     border: 2px solid rgb(137, 94, 14);
     box-shadow: 0 0 2px 2px rgb(164, 157, 70);
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 2rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
 }
+
+.addButton:hover,
+.addButton:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.addButton:hover {
+    transform: translateY(-1px);
+}
+
+.addButton:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+
 
 .recipeName {
     color: rgb(137, 94, 14);
@@ -97,10 +149,21 @@
 }
 
 .flexIng {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 400px;
 }
 
 .cooktime {
     margin-bottom: 10px;
+}
+
+.directions_title {
+    font-size: x-large;
+    text-decoration: underline;
+    padding-bottom: 5px;
 }

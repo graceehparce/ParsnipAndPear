@@ -41,6 +41,28 @@ export const RecipeList = () => {
         },
         [phaseId])
 
+    useEffect(
+        () => {
+            const veganFilter = recipes.filter(recipe => {
+                return recipe.vegan === true || recipe.vegan === "true"
+            })
+            setFilteredRecipes(veganFilter)
+
+        },
+        [veganRecipes]
+    )
+
+    useEffect(
+        () => {
+            const GFFilter = recipes.filter(recipe => {
+                return recipe.glutenFree === true || recipe.glutenFree === "true"
+            })
+            setFilteredRecipes(GFFilter)
+
+        },
+        [GFRecipes]
+    )
+
     const createNewUserRecipe = (clickEvent) => {
 
         const URToSendToAPI = {
@@ -69,15 +91,28 @@ export const RecipeList = () => {
                     <div className="titleBox">
                         <h2 className="phaseName">{phase?.name} Phase Recipe List</h2>
                         <div>
-                            <button className="list-button">Vegan</button>
-                            <button className="list-button">Gluten-Free</button>
+                            <button
+                                onClick={() => setVeganRecipes(!veganRecipes)}
+                                className="list-button">
+                                Vegan
+                            </button>
+                            <button
+                                onClick={() => setGFRecipes(!GFRecipes)}
+                                className="list-button">
+                                Gluten-Free
+                            </button>
+                            <button
+                                onClick={() => setFilteredRecipes(recipes)}
+                                className="list-button">
+                                All Recipes
+                            </button>
                         </div>
                     </div>
                     <section className="phaseRecipe_list">
                         <div>
                             {
                                 filteredRecipes.map((recipe) => {
-                                    return <li className="phaseRecipe_name"><Link className="phaseRecipe_name" to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
+                                    return <li className="phaseRecipe_name"><img className="picInList" src={recipe.image} alt=""></img><Link className="phaseRecipe_name" to={`/recipe/${recipe.id}`}>{recipe?.name}</Link>
                                         <button
                                             value={recipe.id}
                                             onClick={(clickEvent) => createNewUserRecipe(clickEvent)}

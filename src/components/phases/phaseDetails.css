@@ -12,7 +12,7 @@
 
 .profileBox1 {
     background-color: rgb(137, 94, 14);
-    width: 900px;
+    width: 950px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -45,4 +45,20 @@
     font-size: x-large;
     font-weight: 800;
     padding: 20px;
+}
+
+.phaseInfoGraphicLink {
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(137, 94, 14);
+    border: 2px solid rgb(164, 157, 70);
+    background-color: white;
+    width: 80px;
+}
+
+.phase_title_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

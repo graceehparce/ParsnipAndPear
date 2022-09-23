@@ -53,6 +53,7 @@ export const RecipeProfile = () => {
     }
 
 
+
     return <section className="profileFlexBox">
         <div className="RPBox1">
             <div className="RPBox2">
@@ -61,29 +62,34 @@ export const RecipeProfile = () => {
                     <section className="recipeProfile">
                         <div className="recipeName">{recipe?.name}</div>
                         <div className="upperBox">
-                            <img src={recipe.image} width="300px" height="450px" alt=""></img>
+                            <img className="thePicBox" src={recipe.image} alt=""></img>
                             <div className="cooktimeBox">
-                                <div className="cooktime">Cooktime: {recipe?.cookTime} minutes</div>
-                                <div>Ingredients:
-                                    <ul className="flexIng">
-                                        {
-                                            recIngredients.map((recIngredient) => {
-                                                return <li className="flexItem">{recIngredient.quantity} {recIngredient.ingredient.name}
-                                                    <button
-                                                        value={recIngredient.ingredientId}
-                                                        id={recIngredient.quantity}
-                                                        onClick={(clickEvent) => createNewUserIngredient(clickEvent)}
-                                                        className="addButton">Add
-                                                    </button>
-                                                </li>
-                                            }
-                                            )
-                                        }
-                                    </ul>
+                                <div className="cookIngBox">
+                                    <div className="cooktime">Cooktime: {recipe?.cookTime} minutes</div>
+                                    <div>Ingredients:</div>
                                 </div>
+                                <div className="flexIng">
+                                    {
+                                        recIngredients.map((recIngredient) => {
+                                            return <li className="flexItem">{recIngredient.quantity} {recIngredient.ingredient.name}
+                                                <button
+                                                    value={recIngredient.ingredientId}
+                                                    id={recIngredient.quantity}
+                                                    onClick={(clickEvent) => createNewUserIngredient(clickEvent)}
+                                                    className="addButton">Add
+                                                </button>
+                                            </li>
+                                        }
+                                        )
+                                    }
+                                </div>
+
                             </div>
                         </div>
-                        <div className="directions">Directions: {recipe?.directions}</div>
+                        <div className="directions">
+                            <div className="directions_title">Directions: </div>
+                            <div className="directions_content">{recipe?.directions}</div>
+                        </div>
                     </section>
                 </div>
             </div>

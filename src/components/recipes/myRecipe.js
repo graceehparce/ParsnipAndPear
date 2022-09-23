@@ -40,28 +40,31 @@ export const MyRecipes = () => {
         <div className="inner_list">
             <div className="banner_pic_box">
                 <div className="list_box">
-                    <div className="outer">
-                        <h2 className="inner_title">
-                            <div className="myRecipes_title">
-                                My Recipes
-                            </div>
-                        </h2>
+                    <div className="titleBox">
+                        <div className="outer">
+                            <h2 className="inner_title">
+                                <div className="myRecipes_title">
+                                    My Recipes
+                                </div>
+                            </h2>
+                        </div>
                     </div>
-                    <div>
-                        {
-                            userRecipes.map((userRecipe) => {
-                                return <li className="recipe">
-                                    <Link className="recipe_name" to={`/recipe/${userRecipe.recipe.id}`}>{userRecipe.recipe.name}</Link>
-                                    <button
-                                        className="delete_button"
-                                        value={userRecipe.id}
-                                        onClick={deleteUR}>Delete
-                                    </button>
-                                </li>
-                            }
-                            )
+
+                    {
+                        userRecipes.map((userRecipe) => {
+                            return <li className="recipe">
+                                <img className="listPicBox" src={userRecipe.recipe.image} alt=""></img>
+                                <Link className="recipe_name" to={`/recipe/${userRecipe.recipe.id}`}>{userRecipe.recipe.name}</Link>
+                                <button
+                                    className="delete_button"
+                                    value={userRecipe.id}
+                                    onClick={deleteUR}>Delete
+                                </button>
+                            </li>
                         }
-                    </div>
+                        )
+                    }
+
                 </div>
             </div>
         </div>
