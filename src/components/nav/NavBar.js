@@ -30,6 +30,12 @@ export const NavBar = () => {
                     <Link className="navbar__link" to="/phases">Phases</Link>
                 </li>
                 <li className="navbar__item active">
+                    <Link className="navbar__link" to="/resources">Resources</Link>
+                </li>
+                <li className="navbar__item active">
+                    <Link className="navbar__link" to="">Home</Link>
+                </li>
+                <li className="navbar__item active">
                     <Link className="navbar__link" to="" onClick={() => {
                         localStorage.removeItem("pandp_user")
                         navigate("/", { replace: true })
