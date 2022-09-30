@@ -44,9 +44,9 @@ export const Home = () => {
             <div className="info5">
                 <p className="intro3">So that was a lot... what now?</p>
                 <div className="bigBox">
-                    <div className="box">
+                    <div className="box3">
                         <p className="saying">Know this...</p>
-                        <p className="innerText">What you eat provides the foundation your body needs to keep your hormones balanced. Eating the wrong foods or eliminating entire categories of macronutrients from your diet can rob your system of the raw materials it needs to produce healthy hormones which play a critical role in our physical health, cognitive function, moods and longevity.
+                        <p className="answerLine">What you eat provides the foundation your body needs to keep your hormones balanced. Eating the wrong foods or eliminating entire categories of macronutrients from your diet can rob your system of the raw materials it needs to produce healthy hormones which play a critical role in our physical health, cognitive function, moods and longevity.
 
                             When we have issues with our hormones, we’re often told there’s nothing we can do about it other than take synthetic birth control and deal with the side effects. Nobody tells us the foods we’re consuming could be contributing to the problem and that we can fix our symptoms simply by changing our eating habits.</p>
                     </div>
@@ -64,7 +64,7 @@ export const Home = () => {
                 <p>We even have delicious, phase specific recipes already picked out for you.</p>
                 <p>Happy syncing!</p>
             </div>
-            <div className="dividingLine2"></div>
+            <div className="dividingLine"></div>
 
         </section>
     </section >

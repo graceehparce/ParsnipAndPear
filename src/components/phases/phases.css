@@ -5,9 +5,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: rgba(233, 190, 165, 0.5);
 }
 
 .phases {
+    margin: 50px;
     background-color: rgb(137, 94, 14);
     width: 500px;
     height: 500px;

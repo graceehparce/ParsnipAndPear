@@ -20,12 +20,12 @@
     border-radius: 2%;
 }
 
-.box {
+.box5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    padding: 30px;
     border-radius: 2%;
-
+    background-color: rgba(233, 190, 165, 0.75);
 }

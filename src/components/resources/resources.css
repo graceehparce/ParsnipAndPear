@@ -1,0 +1,63 @@
+.wholeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(233, 190, 165);
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border: 2px solid rgb(137, 94, 14);
+}
+
+.books {
+    background-color: rgba(164, 157, 70, 0.5);
+    box-shadow: 0 0 5px 5px rgba(164, 157, 70, 0.5);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.text {
+    text-align: center;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: large;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.text2 {
+    text-align: center;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: medium;
+    font-weight: 800;
+}
+
+.headingRes {
+    text-align: center;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: xx-large;
+    font-weight: 900;
+    background-color: rgba(207, 162, 72, 0.5);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 5%;
+}

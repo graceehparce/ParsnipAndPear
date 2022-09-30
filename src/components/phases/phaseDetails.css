@@ -1,64 +1,179 @@
 .flexContainer {
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.phaseProfile {
+.phaseName {
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(137, 94, 14);
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    margin: 0px;
+}
+
+.basicsBox {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.profileBox1 {
-    background-color: rgb(137, 94, 14);
-    width: 950px;
-    height: auto;
+.pTitleBox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-.profileBox2 {
-    background-image: url("../images/background.jpg");
-    background-size: 900px;
-    width: 800px;
-    height: auto;
-    border: 7px solid;
-    color: rgb(233, 190, 165);
-    margin: 50px;
-    box-shadow: 0 0 10px 10px rgb(164, 157, 70);
-    padding: 50px;
-}
-
-.profileBox3 {
-    background-size: 700px;
-    background-color: rgb(233, 190, 165);
-    width: 700px;
-    height: auto;
-    border: 7px solid white;
+    background-color: rgba(164, 157, 70, 0.5);
+    border-radius: 5%;
+    margin: 30px;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: x-large;
+    font-size: medium;
     font-weight: 800;
-    padding: 20px;
+    padding: 10px;
+    width: 1000px;
 }
 
 .phaseInfoGraphicLink {
     text-align: center;
     text-decoration: none;
     font-size: medium;
+    font-weight: 800;
     color: rgb(137, 94, 14);
     border: 2px solid rgb(164, 157, 70);
-    background-color: white;
-    width: 80px;
+    background-color: rgba(233, 190, 165, 0.5);
+    width: 200px;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
 }
 
 .phase_title_box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.phasePicBox {
+    width: 500px;
+    max-height: 500px;
+    border-radius: 5%;
+}
+
+.phasePicChart {
+    width: 700px;
+    max-height: 700px;
+    border-radius: 5%;
+}
+
+.pBox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(233, 190, 165, 0.5);
+    margin: 20px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.pBox2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(164, 157, 70, 0.5);
+    margin: 20px;
+    border-radius: 5%;
+    padding: 50px;
+}
+
+.pQuestion {
+    text-align: center;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.infoPBox {
+    background-color: rgba(164, 157, 70, 0.5);
+    border-radius: 20%;
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    font-size: large;
+    font-weight: 800;
+    padding: 40px;
+    width: 350px;
+    margin: 20px;
+}
+
+.infoPBoxinner {
+    font-family: 'Jua';
+    font-size: medium;
+    font-weight: 100;
+    color: rgb(137, 94, 14);
+}
+
+.infoPBox1 {
+    padding: 40px;
+    width: 500px;
+    font-family: 'Jua';
+    font-size: medium;
+    font-weight: 100;
+    color: rgb(137, 94, 14);
+}
+
+.firstBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cycleVisual {
+    border-radius: 40%;
+}
+
+.title7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.phaseBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxWithButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dividingLine {
+    align-items: center;
+}
+
+.picTitle {
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(137, 94, 14);
+    color: rgb(137, 94, 14);
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+}
+
+.inner {
+    font-family: 'Jua';
+    font-size: medium;
+    font-weight: 100;
+    color: rgb(137, 94, 14);
 }

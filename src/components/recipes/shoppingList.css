@@ -1,3 +1,8 @@
+.shopping_list {
+    background-color: rgba(233, 190, 165, 0.5);
+    padding: 30px;
+}
+
 .shopBox1 {
     height: auto;
     display: flex;
@@ -75,11 +80,12 @@
 .ingredient_name {
     margin: 0;
     text-decoration: none;
+    font-family: 'Jua';
+    font-size: large;
+    font-weight: 300;
     color: rgb(137, 94, 14);
-    font-family: 'Amatic SC', cursive;
-    font-size: x-large;
-    font-weight: 2000;
 }
+
 
 .delete_button_shoppingList {
     width: 35px;

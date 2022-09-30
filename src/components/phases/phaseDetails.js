@@ -19,25 +19,53 @@ export const PhaseProfile = () => {
         [phaseId])
 
     return <section className="flexContainer">
-        <section classname="phaseProfile">
-            <div className="profileBox1">
-                <div className="profileBox2">
-                    <div className="profileBox3">
-                        <div className="phase_title_box">
-                            <h2 classname="phaseName">{phase?.name} Phase</h2>
-                            <Link className="phaseInfoGraphicLink" to={`/phaseInfoGraphic/${phase.id}`}>Don't feel like reading this? Click here.</Link>
-                        </div>
-                        <h3>What is it?</h3>
-                        <div>{phase.basics}</div>
-                        <h3>What should you eat? </h3>
-                        <div>{phase.nutrition}</div>
-                        <h3>How should you move your body?</h3>
-                        <div>{phase.exercise}</div>
-                        <h3>How might you be feeling? </h3>
-                        <div>{phase.social}</div>
+        <div className="phaseBox">
+            <div className="boxWithButton">
+                <div className="firstBox">
+                    <div className="picTitle">Let's learn about...</div>
+                    <div className="title7">
+                        <div className="picTitle">The </div>
+                        <img className="phasePicBox2" src={phase.titleImg} alt=""></img>
+                        <div className="picTitle">Phase</div>
                     </div>
                 </div>
+                <Link className="phaseInfoGraphicLink" to={`/phaseInfoGraphic/${phase.id}`}>Don't feel like reading this? Click here.</Link>
             </div>
-        </section>
-    </section>
+            <div className="pTitleBox">
+                <div className="basicsBox">
+                    <div className="phaseName">The Basics</div>
+                    <div className="infoPBox1">{phase.basics}</div>
+                </div>
+                <div className="pBox1">
+                    <img src="/cycleVisual.jpg" alt="" className="cycleVisual" style={{ width: '300px', }} />
+                </div>
+            </div>
+        </div>
+        <div className="dividingLine"></div>
+        <div className="pBox1">
+            <img className="phasePicBox" src={phase.foodImg} alt=""></img>
+            <div className="infoPBox">
+                <h3 className="pQuestion">What should you eat? </h3>
+                <div className="infoPBoxinner">{phase.nutrition}</div>
+            </div>
+        </div>
+        <div className="pBox2">
+            <img className="phasePicChart" src={phase.chartImg} alt=""></img>
+        </div>
+        <div className="pBox1">
+            <div className="infoPBox">
+                <h3 className="pQuestion">How should you move your body?</h3>
+                <div className="inner">{phase.exercise}</div>
+            </div>
+            <img className="phasePicBox" src={phase.exerciseImg} alt=""></img>
+        </div>
+        <div className="pBox1">
+            <img className="phasePicBox" src={phase.cycleImg} alt=""></img>
+            <div className="infoPBox">
+                <h3 className="pQuestion">How might you be feeling? </h3>
+                <div className="inner">{phase.social}</div>
+            </div>
+        </div>
+        <div className="dividingLine2"></div>
+    </section >
 }
