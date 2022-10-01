@@ -40,12 +40,12 @@
 .phaseInfoGraphicLink {
     text-align: center;
     text-decoration: none;
-    font-size: medium;
-    font-weight: 800;
+    font-size: xx-large;
+    font-weight: 900;
     color: rgb(137, 94, 14);
     border: 2px solid rgb(164, 157, 70);
     background-color: rgba(233, 190, 165, 0.5);
-    width: 200px;
+    width: 300px;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
 }
@@ -94,8 +94,8 @@
     text-align: center;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: x-large;
-    font-weight: 800;
+    font-size: xx-large;
+    font-weight: 900;
     margin-bottom: 10px;
     margin-top: 0;
 }

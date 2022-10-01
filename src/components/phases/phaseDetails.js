@@ -29,7 +29,6 @@ export const PhaseProfile = () => {
                         <div className="picTitle">Phase</div>
                     </div>
                 </div>
-                <Link className="phaseInfoGraphicLink" to={`/phaseInfoGraphic/${phase.id}`}>Don't feel like reading this? Click here.</Link>
             </div>
             <div className="pTitleBox">
                 <div className="basicsBox">
@@ -52,6 +51,8 @@ export const PhaseProfile = () => {
         <div className="pBox2">
             <img className="phasePicChart" src={phase.chartImg} alt=""></img>
         </div>
+        <div className="dividingLine2"></div>
+
         <div className="pBox1">
             <div className="infoPBox">
                 <h3 className="pQuestion">How should you move your body?</h3>
@@ -66,6 +67,8 @@ export const PhaseProfile = () => {
                 <div className="inner">{phase.social}</div>
             </div>
         </div>
+        <Link className="phaseInfoGraphicLink" to={`/phaseInfoGraphic/${phase.id}`}>Need help? Click here to see our top 5 tips!</Link>
+
         <div className="dividingLine2"></div>
     </section >
 }

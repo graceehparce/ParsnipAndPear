@@ -4,6 +4,8 @@
     justify-content: center;
     padding: 50px;
     background-color: rgba(233, 190, 165, 0.5);
+    margin: 0;
+    padding-bottom: 200px;
 }
 
 .inner_list {
@@ -91,7 +93,7 @@
     text-decoration: none;
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: xarge;
+    font-size: large;
     font-weight: 900;
 }
 
@@ -111,7 +113,7 @@
 }
 
 .listPicBox {
-    width: 75px;
+    width: 120px;
     height: 100%;
     border: 2px solid rgb(137, 94, 14);
     margin: 5px;
@@ -123,7 +125,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border: 2px solid rgb(164, 157, 70);
     background-color: rgb(249, 227, 215);
@@ -134,7 +136,7 @@
 .info {
     color: rgb(137, 94, 14);
     font-family: 'Amatic SC', cursive;
-    font-size: small;
+    font-size: medium;
     font-weight: bolder;
 }
 

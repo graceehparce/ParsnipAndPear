@@ -3,9 +3,12 @@ import "./resources.css"
 
 export const Resources = () => {
     return <section className="wholeBox">
-        <div className="headingRes">
-            <div>Want to learn more about women's health??</div>
-            <div>Checkout these resources from some of the most influencial women in the field!</div>
+        <div className="headingDiv">
+            <div className="headingRes">
+                <div className="ResTitle">Resources!</div>
+                <div>Want to learn more about women's health??</div>
+                <div>Checkout these books by some of the most influencial women in the field!</div>
+            </div>
         </div>
         <div className="dividingLine2"></div>
         <div className="books">
@@ -29,6 +32,19 @@ export const Resources = () => {
                 <a className="text" target="_blank" href="https://www.sarahehill.com/">Your Brain on Birth Control</a>
                 <a className="text2" target="_blank" href="https://www.amazon.com/This-Your-Brain-Birth-Control/dp/0525536035/ref=sr_1_1?keywords=your+brain+on+birth+control+sarah+hill&qid=1664558255&qu=eyJxc2MiOiIxLjU3IiwicXNhIjoiMS4zMSIsInFzcCI6IjEuNDQifQ%3D%3D&sprefix=your+brain+on+bi%2Caps%2C107&sr=8-1">Buy it!</a>
             </div>
+        </div>
+        <div className="dividingLine"></div>
+        <div className="extraRes">In case you weren't sure where to find them, here are some of Parsnip & Pear's resources with charts and information to make your life easier...</div>
+        <img src="/FoodChart.jpg" alt="" className="pic7" style={{ width: '700px', }} />
+        <div className="dividingLine2"></div>
+        <img src="/CycleChart.jpg" alt="" className="pic8" style={{ width: '700px', }} />
+        <div className="section1">
+            <img src="/MIG.jpg" alt="infographic_img" className="infoG" style={{ width: '500px', }} />
+            <img src="/FIG.jpg" alt="infographic_img" className="infoG" style={{ width: '500px', }} />
+        </div>
+        <div className="section1">
+            <img src="/OIG.jpg" alt="infographic_img" className="infoG" style={{ width: '500px', }} />
+            <img src="/LIG.jpg" alt="infographic_img" className="infoG" style={{ width: '500px', }} />
         </div>
 
     </section>
