@@ -26,3 +26,6 @@ HTML5, CSS3, JavaScript, React, GitHub, JSON Server, Visual Studio Code
 
 ## Wireframe
 https://sketchboard.me/jDri7w1fDddc
+
+## Demo
+https://www.loom.com/share/542748d18ef84cf98ef08f099ac95592
