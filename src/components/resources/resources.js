@@ -32,6 +32,16 @@ export const Resources = () => {
                 <a className="text" target="_blank" href="https://www.sarahehill.com/">Your Brain on Birth Control</a>
                 <a className="text2" target="_blank" href="https://www.amazon.com/This-Your-Brain-Birth-Control/dp/0525536035/ref=sr_1_1?keywords=your+brain+on+birth+control+sarah+hill&qid=1664558255&qu=eyJxc2MiOiIxLjU3IiwicXNhIjoiMS4zMSIsInFzcCI6IjEuNDQifQ%3D%3D&sprefix=your+brain+on+bi%2Caps%2C107&sr=8-1">Buy it!</a>
             </div>
+            <div className="book1">
+                <img src="/takingCharge.jpg" alt="" className="bookImg" style={{ width: '200px', height: '300px' }} />
+                <a className="text" target="_blank" href="https://www.tcoyf.com/">Taking Charge of Your Fertility</a>
+                <a className="text2" target="_blank" href="https://www.amazon.com/Taking-Charge-Your-Fertility-Anniversary/dp/0062326031/ref=asc_df_0062326031/?tag=hyprod-20&linkCode=df0&hvadid=312142103956&hvpos=&hvnetw=g&hvrand=14745724868761487277&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013187&hvtargid=pla-434631356316&psc=1">Buy it!</a>
+            </div>
+            <div className="book1">
+                <img src="/periodRepairManual.jpeg" alt="" className="bookImg" style={{ width: '200px', height: '300px' }} />
+                <a className="text" target="_blank" href="https://www.larabriden.com/">The Period Repair Manual</a>
+                <a className="text2" target="_blank" href="https://www.amazon.com/Period-Repair-Manual-Treatment-Hormones/dp/0648352404/ref=sr_1_1?keywords=the+period+repair+manual&qid=1664811358&qu=eyJxc2MiOiIxLjY0IiwicXNhIjoiMS4xOSIsInFzcCI6IjEuNDEifQ%3D%3D&sprefix=the+period+repa%2Caps%2C124&sr=8-1">Buy it!</a>
+            </div>
         </div>
         <div className="dividingLine"></div>
         <div className="extraRes">In case you weren't sure where to find them, here are some of Parsnip & Pear's resources with charts and information to make your life easier...</div>
