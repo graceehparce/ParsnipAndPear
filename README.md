@@ -1,6 +1,12 @@
 # Parsnip & Pear
 
+## Application Overview
+
 Unlike men, women have an infradian, or monthly hormone cycle.  The problem is, most people know nothing about that cycle and all the amazing things it can tell women about their overall health. The way we live and fuel our bodies has a huge impact on how that hormone cycle runs. Nutrient deficiencies, lack of sleep, and stress can very easily interfere with hormones functioning optimally. This app provides resources to help women educate themselves about their bodies and helps them to live and eat more cyclically for hormonal health. 
+
+## Features
+
+## Technologies Used
 
 ## Available Scripts
 
